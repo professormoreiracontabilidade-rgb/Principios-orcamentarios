@@ -6,64 +6,194 @@
 <title>Trilha de Aprendizagem - Princípios Orçamentários</title>
 <style>
 :root{
-  --azul:#0b2c5f; --azul2:#123f87; --vinho:#7a1230; --verde:#0f8b4c; --rosa:#ffe3ef; --fundo:#eef4ff; --card:#ffffff; --texto:#172033; --amarelo:#fff3bd;
+  --azul:#073b6d; --azul2:#0b5fa5; --verde:#13a061; --vermelho:#c62828; --amarelo:#fff3cd;
+  --fundo:#eef6ff; --card:#ffffff; --texto:#162033; --cinza:#d9e6f2;
 }
-*{box-sizing:border-box} body{margin:0;font-family:Arial,Helvetica,sans-serif;background:linear-gradient(180deg,var(--fundo),#fff);color:var(--texto)}
-.app{max-width:430px;margin:0 auto;min-height:100vh;background:#fff;box-shadow:0 0 25px #0002;position:relative;overflow:hidden}.top{background:linear-gradient(135deg,var(--azul),var(--azul2));color:#fff;padding:16px 16px 12px;border-bottom-left-radius:24px;border-bottom-right-radius:24px}.brand{font-size:13px;font-weight:700;opacity:.95}.title{font-size:27px;line-height:1.05;margin:10px 0 4px;font-weight:900}.sub{font-size:15px;opacity:.95}.progressWrap{padding:12px 18px}.bar{height:13px;background:#dbe7ff;border-radius:99px;overflow:hidden}.bar span{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--verde),#53cf84);transition:.3s}.counter{font-size:13px;text-align:center;margin-top:6px;color:#445}.screen{display:none;padding:16px 18px 96px}.screen.active{display:block}.box{background:var(--card);border:2px solid #dbe6ff;border-radius:22px;padding:18px;margin:12px 0;box-shadow:0 8px 22px #123f8715}.hero{background:linear-gradient(135deg,#fff,var(--rosa));border:3px solid #ffd0e2}.emoji{font-size:40px}.h1{font-size:25px;font-weight:900;margin:8px 0;color:var(--azul)}.h2{font-size:22px;font-weight:900;margin:4px 0 12px;color:var(--vinho)}.big{font-size:19px;line-height:1.45}.pill{display:inline-block;background:#e8f1ff;color:var(--azul);padding:7px 10px;border-radius:999px;font-weight:800;margin:4px 3px;font-size:13px}.input{width:100%;padding:15px;border:2px solid #c9d8ff;border-radius:14px;font-size:18px;margin-top:8px}.btn{border:0;border-radius:16px;padding:14px 15px;font-size:17px;font-weight:900;cursor:pointer;margin:6px 0;width:100%;box-shadow:0 6px 14px #0002}.primary{background:var(--azul);color:#fff}.green{background:var(--verde);color:#fff}.wine{background:var(--vinho);color:#fff}.light{background:#edf4ff;color:var(--azul);border:2px solid #cfe0ff}.nav{position:fixed;left:50%;transform:translateX(-50%);bottom:0;max-width:430px;width:100%;background:#fff;border-top:2px solid #dbe6ff;padding:8px 10px;display:flex;gap:7px;z-index:10}.nav button{flex:1;border:0;border-radius:13px;padding:11px 7px;font-weight:900;color:#fff;background:var(--azul);font-size:14px}.nav .restart{background:var(--vinho)}.nav .home{background:#566}.mind{background:#f8fbff;border-left:7px solid var(--azul);padding:13px;border-radius:15px;margin:10px 0}.mind b{color:var(--azul)}.warn{background:var(--amarelo);border:2px dashed #e0b300;border-radius:16px;padding:13px;font-size:17px}.qmeta{font-size:13px;font-weight:800;color:#546;background:#edf4ff;padding:10px;border-radius:13px;margin-bottom:12px}.question{font-size:18px;line-height:1.38;font-weight:800}.opt{display:block;width:100%;text-align:left;background:#fff;border:2px solid #dce5f7;border-radius:15px;margin:9px 0;padding:12px;font-size:16px;line-height:1.25;cursor:pointer}.opt.correct{background:#dff8e9;border-color:var(--verde)}.opt.wrong{background:#ffe1e8;border-color:#d4204a}.feedback{display:none;margin-top:12px;padding:14px;border-radius:15px;font-size:17px;line-height:1.35;font-weight:700}.feedback.ok{display:block;background:#dff8e9;color:#075b31}.feedback.no{display:block;background:#ffe1e8;color:#8a0e2b}.score{display:grid;grid-template-columns:1fr 1fr;gap:10px}.score div{background:#edf4ff;border-radius:16px;padding:14px;text-align:center;font-weight:900}.small{font-size:13px;color:#5b6475;line-height:1.35}.footerMark{text-align:center;font-size:12px;color:#667;margin-top:12px;font-weight:700}.phase{font-size:13px;color:#fff;background:var(--vinho);display:inline-block;padding:6px 10px;border-radius:999px;font-weight:900;margin-bottom:8px}
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;background:linear-gradient(180deg,#e8f4ff,#ffffff);color:var(--texto);}
+.app{max-width:430px;margin:0 auto;min-height:100vh;background:var(--fundo);box-shadow:0 0 18px rgba(0,0,0,.15);position:relative;overflow:hidden;padding-bottom:90px;}
+.header{background:linear-gradient(135deg,var(--azul),var(--azul2));color:#fff;padding:18px 16px;text-align:center;border-bottom-left-radius:22px;border-bottom-right-radius:22px;}
+.header h1{font-size:22px;margin:0 0 6px;line-height:1.15}.header p{margin:0;font-size:13px;opacity:.95}
+.screen{display:none;padding:16px}.screen.active{display:block}.card{background:var(--card);border-radius:20px;padding:18px;box-shadow:0 8px 22px rgba(5,45,90,.13);margin-bottom:14px;border:1px solid #d9ecff;}
+.badge{display:inline-block;background:#dff3ff;color:#073b6d;padding:7px 10px;border-radius:999px;font-weight:bold;font-size:12px;margin:4px 4px 4px 0}.title{font-size:22px;font-weight:900;color:var(--azul);margin:8px 0 12px}.subtitle{font-size:16px;font-weight:800;color:var(--azul);margin:10px 0}.big{font-size:18px;line-height:1.45}.small{font-size:13px;line-height:1.45}.muted{color:#526273}.pill{background:#f1f8ff;padding:10px;border-radius:14px;margin:8px 0;border-left:5px solid var(--azul2)}
+.btn{border:0;border-radius:14px;padding:13px 14px;font-weight:900;font-size:15px;cursor:pointer;margin:6px 0;width:100%;background:var(--azul2);color:white;box-shadow:0 5px 12px rgba(0,0,0,.12)}.btn.secondary{background:#eef4fb;color:var(--azul);border:1px solid #c9dff2}.btn.green{background:var(--verde)}.btn.red{background:var(--vermelho)}.btn.yellow{background:#ffb300;color:#241700}.row{display:flex;gap:8px}.row .btn{flex:1}.progress-wrap{height:12px;background:#cfe4f6;border-radius:999px;overflow:hidden;margin:10px 0}.progress{height:100%;background:linear-gradient(90deg,#12a05c,#18a0fb);width:0%;transition:.3s}.footer-nav{position:fixed;left:50%;transform:translateX(-50%);bottom:0;max-width:430px;width:100%;background:#fff;border-top:1px solid #d8e7f5;padding:8px;display:flex;gap:6px;z-index:20}.footer-nav button{font-size:12px;padding:10px 6px;border-radius:12px;border:0;background:#eaf4ff;color:var(--azul);font-weight:900}.footer-nav button:nth-child(2){background:var(--azul2);color:#fff;flex:1}.question-meta{font-size:13px;font-weight:900;color:#073b6d;background:#eaf4ff;padding:10px;border-radius:13px;white-space:pre-line;margin-bottom:10px}.qtext{font-size:16px;line-height:1.42;white-space:pre-line}.option{display:block;width:100%;text-align:left;border:2px solid #d7e6f2;background:#fff;border-radius:14px;padding:12px;margin:8px 0;font-size:15px;line-height:1.35;cursor:pointer}.option.correct{background:#e4f8ed;border-color:var(--verde);color:#075b34;font-weight:900}.option.wrong{background:#fde8e8;border-color:var(--vermelho);color:#8b1010;font-weight:900}.explain{background:#fff8df;border-left:6px solid #ffb300;padding:12px;border-radius:12px;margin-top:12px;line-height:1.45}.grid{display:grid;grid-template-columns:repeat(6,1fr);gap:6px;margin-top:12px}.grid button{border:0;border-radius:10px;padding:10px 0;font-weight:900;background:#dbeafa;color:#073b6d}.grid button.done{background:#bdebd3;color:#064b2e}.grid button.current{background:#073b6d;color:#fff}.logo{font-weight:900;color:#fff}.whats{font-weight:900;color:#0b6b3b}.finalscore{font-size:40px;font-weight:900;color:var(--azul);text-align:center}.tagline{text-align:center;font-size:12px;color:#fff;margin-top:8px}
 </style>
 </head>
 <body>
 <div class="app">
-  <div class="top"><div class="brand">Curso de Contabilidade Professor Moreira</div><div class="title">🚀 Trilha dos Princípios Orçamentários</div><div class="sub">Teoria + revisão + questões FGV</div></div>
-  <div class="progressWrap"><div class="bar"><span id="bar"></span></div><div class="counter" id="counter">Tela 1 de 23</div></div>
+  <div class="header">
+    <div class="logo">Curso de Contabilidade Professor Moreira</div>
+    <h1>Trilha de Aprendizagem<br>Princípios Orçamentários</h1>
+    <p>Teoria + Questões FGV copiadas conforme o PDF original</p>
+    <div class="tagline">WhatsApp: (61) 98532-3574</div>
+  </div>
 
-  <section class="screen active" id="s0"><div class="box hero"><div class="emoji">🎯</div><div class="h1">Comece sua trilha</div><p class="big">Digite seu nome para liberar a trilha de aprendizagem.</p><input id="student" class="input" placeholder="Seu nome completo"><button class="btn primary" onclick="startTrail()">✅ Iniciar trilha</button><button class="btn light" onclick="continueTrail()">▶️ Continuar de onde parei</button><button class="btn green" onclick="sendStart()">📲 Avisar início ao professor</button><div class="warn">🏆 Contabilidade Pública se aprende com conceito, revisão e questão!</div></div></section>
+  <section id="home" class="screen active">
+    <div class="card">
+      <div class="title">🚀 Iniciar Trilha</div>
+      <p class="big">Digite seu nome para começar a jornada de revisão dos <b>Princípios Orçamentários</b>.</p>
+      <input id="studentName" placeholder="Nome do aluno" style="width:100%;padding:14px;border-radius:14px;border:2px solid #c8dced;font-size:16px;margin:10px 0">
+      <button class="btn green" onclick="startTrail()">Começar trilha</button>
+      <button class="btn secondary" onclick="continueTrail()">Continuar de onde parei</button>
+      <div class="pill">✅ 9 cards de teoria<br>✅ 11 questões FGV originais do PDF<br>✅ Gabarito e comentário após responder<br>✅ Progresso salvo automaticamente</div>
+    </div>
+  </section>
 
-  <section class="screen" id="s1"><span class="phase">FASE 1 - VISÃO GERAL</span><div class="box"><div class="h2">📌 Finalidade dos princípios</div><p class="big">Os princípios orçamentários estabelecem diretrizes para garantir racionalidade, eficiência, transparência, controle e segurança jurídica na elaboração e execução do orçamento público.</p><div class="mind"><b>Aplicação:</b> União, Estados, DF, Municípios e todos os Poderes.</div><div class="mind"><b>Fundamentação:</b> Constituição Federal, Lei nº 4.320/1964, LRF e doutrina.</div></div></section>
-  <section class="screen" id="s2"><span class="phase">FASE 2 - CLÁSSICOS</span><div class="box"><div class="h2">1️⃣ Unidade ou Totalidade</div><p class="big">Deve existir um único orçamento para cada ente federativo.</p><div class="mind"><b>Ideia de prova:</b> evita orçamentos paralelos.</div><div class="warn">💡 Um ente = um orçamento consolidado na LOA.</div></div></section>
-  <section class="screen" id="s3"><span class="phase">FASE 2 - CLÁSSICOS</span><div class="box"><div class="h2">2️⃣ Universalidade</div><p class="big">A LOA deve conter todas as receitas e todas as despesas.</p><div class="mind"><b>Abrange:</b> Poderes, órgãos, entidades, fundos e fundações.</div><div class="warn">💡 Nada pode ficar “fora do orçamento”.</div></div></section>
-  <section class="screen" id="s4"><span class="phase">FASE 2 - CLÁSSICOS</span><div class="box"><div class="h2">3️⃣ Anualidade ou Periodicidade</div><p class="big">O orçamento vale para um exercício financeiro.</p><div class="mind"><b>Exercício financeiro:</b> 1º de janeiro a 31 de dezembro.</div><div class="warn">💡 Previsão de receitas e fixação de despesas valem por um ano.</div></div></section>
-  <section class="screen" id="s5"><span class="phase">FASE 2 - CLÁSSICOS</span><div class="box"><div class="h2">4️⃣ Exclusividade ou Pureza</div><p class="big">A LOA não pode conter matéria estranha à previsão da receita e à fixação da despesa.</p><div class="mind"><b>Exceções:</b> créditos suplementares e operações de crédito.</div><div class="warn">⚠️ FGV adora trocar exclusividade por legalidade ou anualidade.</div></div></section>
-  <section class="screen" id="s6"><span class="phase">FASE 2 - CLÁSSICOS</span><div class="box"><div class="h2">5️⃣ Orçamento Bruto</div><p class="big">Receitas e despesas devem constar pelo valor total, sem compensações ou deduções prévias.</p><div class="mind"><b>Palavra-chave:</b> valor bruto, total, integral.</div></div></section>
-  <section class="screen" id="s7"><span class="phase">FASE 3 - ADMINISTRATIVOS</span><div class="box"><div class="h2">6️⃣ Legalidade e Publicidade</div><p class="big"><b>Legalidade:</b> o orçamento só existe se aprovado em lei.</p><p class="big"><b>Publicidade:</b> os atos devem ser divulgados, pois o orçamento é lei e deve ser público.</p></div></section>
-  <section class="screen" id="s8"><span class="phase">FASE 3 - ADMINISTRATIVOS</span><div class="box"><div class="h2">7️⃣ Transparência</div><p class="big">Exige divulgação ampla, relatórios fiscais e acesso público às informações de receita e despesa.</p><div class="warn">💡 Transparência vai além de publicar: precisa ser claro e acessível.</div></div></section>
-  <section class="screen" id="s9"><span class="phase">FASE 3 - ADMINISTRATIVOS</span><div class="box"><div class="h2">8️⃣ Não-vinculação dos impostos</div><p class="big">É vedada a vinculação da receita de impostos a órgão, fundo ou despesa, salvo exceções constitucionais.</p><div class="mind"><b>Atenção:</b> a vedação é para impostos, não para todas as receitas.</div><div class="mind"><b>Exceções:</b> saúde, educação, repartição tributária, administração tributária e garantias de operações de crédito.</div></div></section>
-  <section class="screen" id="s10"><span class="phase">REVISÃO MATADORA</span><div class="box"><div class="h2">🧠 Resumo estratégico</div><p class="big">Unidade → um orçamento por ente<br>Universalidade → tudo na LOA<br>Anualidade → 1 ano<br>Exclusividade → só receita e despesa<br>Orçamento bruto → sem deduções<br>Legalidade → depende de lei<br>Publicidade → divulgar<br>Transparência → claro e acessível<br>Não-vinculação → imposto não é carimbado</p></div></section>
+  <section id="lesson" class="screen">
+    <div class="card">
+      <div class="badge" id="lessonCount"></div>
+      <div class="progress-wrap"><div class="progress" id="lessonProgress"></div></div>
+      <div class="title" id="lessonTitle"></div>
+      <div class="big" id="lessonBody"></div>
+    </div>
+    <div class="card">
+      <div class="subtitle">Mapa mental rápido</div>
+      <div id="lessonMap" class="small"></div>
+    </div>
+    <div class="row"><button class="btn secondary" onclick="prevLesson()">⬅ Voltar</button><button class="btn" onclick="nextLesson()">Avançar ➡</button></div>
+  </section>
 
-  <div id="quizScreens"></div>
+  <section id="quiz" class="screen">
+    <div class="card">
+      <div class="badge" id="qCount"></div>
+      <div class="progress-wrap"><div class="progress" id="qProgress"></div></div>
+      <div class="question-meta" id="qMeta"></div>
+      <div class="qtext" id="qText"></div>
+      <div id="options"></div>
+      <div id="feedback"></div>
+    </div>
+    <div class="card">
+      <div class="subtitle">Navegação das questões</div>
+      <div class="grid" id="qGrid"></div>
+    </div>
+    <div class="row"><button class="btn secondary" onclick="prevQuestion()">⬅ Voltar</button><button class="btn" onclick="nextQuestion()">Próxima ➡</button></div>
+  </section>
 
-  <section class="screen" id="s22"><div class="box hero"><div class="emoji">🏆</div><div class="h1">Parabéns!</div><p class="big"><span id="nameEnd">Aluno</span>, você concluiu a trilha de Princípios Orçamentários.</p><div class="score"><div>✅ Acertos<br><span id="scoreOk">0</span></div><div>❌ Erros<br><span id="scoreNo">0</span></div></div><button class="btn green" onclick="sendFinish()">📤 Enviar conclusão ao professor</button><button class="btn wine" onclick="resetAll()">🔄 Estudar novamente</button><div class="footerMark">Curso de Contabilidade Professor Moreira • WhatsApp (61) 98532-3574</div></div></section>
+  <section id="final" class="screen">
+    <div class="card">
+      <div class="title">🏆 Parabéns!</div>
+      <p class="big" id="finalName"></p>
+      <div class="finalscore" id="finalScore"></div>
+      <p class="big">Você concluiu a trilha de Princípios Orçamentários.</p>
+      <button class="btn green" onclick="sendWhatsApp()">📤 Enviar conclusão ao professor</button>
+      <button class="btn secondary" onclick="restartAll()">🔄 Estudar novamente</button>
+    </div>
+  </section>
 
-  <div class="nav"><button class="home" onclick="go(0)">🏠 Início</button><button onclick="prev()">⬅️ Voltar</button><button onclick="next()">Avançar ➡️</button><button class="restart" onclick="resetAll()">🔄</button></div>
+  <div class="footer-nav">
+    <button onclick="showHome()">Início</button>
+    <button onclick="goCurrent()">Continuar</button>
+    <button onclick="restartAll()">Reiniciar</button>
+  </div>
 </div>
+
 <script>
 const phone='5561985323574';
-let current=Number(localStorage.getItem('po_current')||0); let answers=JSON.parse(localStorage.getItem('po_answers')||'{}');
-const questions=[
-{m:'FGV - Ana Leg (ALETO)/ALETO/Ciências Econômicas/2024',q:'Relacione: Unidade, Totalidade, Universalidade e Pureza. A ordem correta é:',opts:['1 – 2 – 3 – 4','1 – 3 – 2 – 4','3 – 2 – 1 – 4','3 – 4 – 1 – 2','4 – 1 – 2 – 3'],a:0,exp:'Unidade: um orçamento por ente. Totalidade: orçamentos autônomos vistos de forma consolidada. Universalidade: todas as receitas e despesas. Pureza/Exclusividade: LOA sem matéria estranha.'},
-{m:'FGV - Cons Leg (CM SP)/CM SP/Economia/2024',q:'A associação correta para Unidade, Totalidade, Universalidade e Pureza é:',opts:['1 – 2 – 3 – 4','1 – 3 – 2 – 4','2 – 1 – 4 – 3','3 – 2 – 4 – 1','3 – 4 – 1 – 2'],a:0,exp:'A sequência segue exatamente: orçamento único, visão consolidada, todas as receitas/despesas e ausência de dispositivo estranho.'},
-{m:'FGV - Cons Leg (CM SP)/CM SP/Contador/2024',q:'Transparência, Publicidade, Totalidade e Não afetação aparecem, na ordem correta, em:',opts:['1 – 3 – 2 – 4','1 – 4 – 2 – 3','4 – 2 – 3 – 1','2 – 4 – 3 – 1','4 – 3 – 2 – 1'],a:3,exp:'Transparência: informação sobre receita/despesa. Publicidade: divulgação ampla. Totalidade: evita orçamentos paralelos. Não afetação: proíbe vincular impostos.'},
-{m:'FGV - Ana GM (Pref SJC)/Pref SJC/Ciências Econômicas/2024',q:'Totalidade, Universalidade, Periodicidade e Especificação correspondem, respectivamente, a:',opts:['1, 2, 3 e 4','1, 3, 2 e 4','2, 3, 1 e 4','2, 1, 4 e 3','3, 2, 4 e 3'],a:0,exp:'Totalidade: visão consolidada; Universalidade: todas as receitas e despesas; Periodicidade: exercício financeiro; Especificação: detalhamento das origens e aplicações.'},
-{m:'FGV - Cons Leg (CM SP)/CM SP/Administração/2024',q:'Sobre transparência, totalidade, não-afetação e universalidade, as afirmativas são:',opts:['V – F – F – F','F – F – V – F','V – V – V – V','F – F – F – F','V – V – F – V'],a:4,exp:'Transparência é divulgação ampla; totalidade trabalha o orçamento único/consolidado; não-afetação não ratifica vinculação, ela veda; universalidade inclui todas as receitas e despesas.'},
-{m:'FGV - Ana GM (Pref SJC)/Pref SJC/Administração de Empresas/2024',q:'Está correto o que se afirma sobre os princípios orçamentários em:',opts:['I, apenas','II, apenas','III, apenas','I e II, apenas','I, II e III'],a:2,exp:'I confunde unidade com universalidade. II confunde exclusividade com anualidade. III está correta: a não afetação busca evitar rigidez orçamentária.'},
-{m:'FGV - Cons Leg (CM SP)/CM SP/Contador/2024',q:'Assinale a afirmativa correta sobre os princípios orçamentários:',opts:['Exclusividade exige agir apenas conforme a lei.','Não-vinculação proíbe dispositivos estranhos na LOA.','Publicidade exige valores sem dedução.','Unidade exige um único orçamento por ente.','Universalidade exige orçamento único para evitar paralelos.'],a:3,exp:'A unidade é o princípio que exige um único orçamento por ente, evitando múltiplos orçamentos paralelos.'},
-{m:'FGV - AA (DNIT)/DNIT/Administração/2024',q:'Qual princípio permite ao Legislativo impedir que o Executivo realize operação de receita ou despesa sem prévia autorização?',opts:['Publicidade','Anualidade','Universalidade','Orçamento bruto','Uniformidade'],a:2,exp:'A universalidade permite que o Legislativo conheça previamente todas as receitas e despesas, autorizando arrecadação e realização.'},
-{m:'FGV - ACE (TCE-GO)/TCE GO/Ciências Contábeis/2024',q:'O princípio que evita múltiplos orçamentos paralelos dentro da mesma pessoa política é:',opts:['Anualidade','Universalidade','Legalidade','Unidade','Orçamento bruto'],a:3,exp:'Unidade: um único orçamento por ente federativo.'},
-{m:'FGV - Ana Leg (ALEP)/ALEP/Administrador/2024',q:'É característica do princípio da transparência:',opts:['Vedar vinculação da receita de impostos.','Disponibilizar informações sobre arrecadação da receita e execução da despesa a qualquer pessoa.','Evitar múltiplos orçamentos paralelos.','Justificar-se pelo orçamento ser lei.','Coibir múltiplos orçamentos paralelos.'],a:1,exp:'Transparência é acesso claro e facilitado às informações orçamentárias, especialmente receita e despesa.'},
-{m:'FGV - Ana Leg III (ALESC)/ALESC/Administrador/2024',q:'O princípio que preconiza que o orçamento deve ser uno é:',opts:['Anualidade','Universalidade','Exclusividade','Unidade','Orçamento Bruto'],a:3,exp:'Orçamento uno = princípio da Unidade.'}
+let name=localStorage.getItem('po_name')||'';
+let lessonIndex=parseInt(localStorage.getItem('po_lesson')||'0');
+let qIndex=parseInt(localStorage.getItem('po_q')||'0');
+let answers=JSON.parse(localStorage.getItem('po_answers')||'{}');
+
+const lessons=[
+{t:'Finalidade dos Princípios Orçamentários',b:'Os princípios orçamentários estabelecem diretrizes básicas para garantir racionalidade, eficiência, transparência, controle e segurança jurídica na elaboração, execução e controle do orçamento público.',m:'🎯 Finalidade → racionalidade + eficiência + transparência + controle + segurança jurídica.'},
+{t:'Aplicação e fundamentação',b:'Aplicam-se à União, Estados, Distrito Federal, Municípios e aos Poderes Executivo, Legislativo e Judiciário. A base está na Constituição Federal, Lei nº 4.320/1964, LRF e doutrina.',m:'📌 Aplicação → todos os entes e Poderes.<br>⚖ Base → CF + Lei 4.320/64 + LRF + doutrina.'},
+{t:'1. Unidade ou Totalidade',b:'Determina a existência de um único orçamento para cada ente federativo, evitando orçamentos paralelos. Todas as receitas e despesas devem constar em uma única LOA.',m:'🧠 Unidade → um orçamento por ente.<br>🎯 Objetivo → evitar orçamentos paralelos.'},
+{t:'2. Universalidade',b:'A LOA deve conter todas as receitas e todas as despesas. Abrange todos os Poderes, órgãos, entidades, fundos e fundações. A ideia central é: nada pode ficar fora do orçamento.',m:'🧠 Universalidade → tudo dentro da LOA.<br>📌 Todas as receitas + todas as despesas.'},
+{t:'3. Anualidade ou Periodicidade',b:'O orçamento vale para um exercício financeiro. No Brasil, o exercício financeiro coincide com o ano civil: 1º de janeiro a 31 de dezembro.',m:'🧠 Anualidade → vigência de 1 ano.<br>📅 Exercício financeiro → 1º/01 a 31/12.'},
+{t:'4. Exclusividade ou Pureza',b:'A LOA não pode conter matéria estranha à previsão da receita e à fixação da despesa. Exceções: autorização para créditos suplementares e operações de crédito.',m:'🧠 Exclusividade/Pureza → LOA só receita e despesa.<br>✅ Exceções → créditos suplementares e operações de crédito.'},
+{t:'5. Orçamento Bruto',b:'Receitas e despesas devem ser registradas pelo valor total, isto é, pelo valor bruto. São vedadas compensações e deduções prévias.',m:'🧠 Orçamento bruto → valor total, sem deduções.<br>🎯 Ideia → clareza e transparência.'},
+{t:'6. Legalidade, Publicidade e Transparência',b:'Legalidade: orçamento depende de lei. Publicidade: os atos devem ser divulgados. Transparência: exige ampla divulgação, relatórios fiscais e acesso claro às informações.',m:'⚖ Legalidade → depende de lei.<br>📢 Publicidade → deve ser divulgado.<br>🔎 Transparência → acessível, claro e amplo.'},
+{t:'7. Não-vinculação da Receita de Impostos',b:'É vedada a vinculação da receita de impostos a órgão, fundo ou despesa, salvo exceções constitucionais, como repartição tributária, saúde, educação, administração tributária e garantias para operações de crédito.',m:'🧠 Não-vinculação → imposto não pode ser carimbado.<br>⚠ Aplica-se à receita de impostos, não a todas as receitas.'}
 ];
-function buildQuiz(){let html='';questions.forEach((it,i)=>{const sid=11+i;html+=`<section class="screen" id="s${sid}"><span class="phase">FASE 4 - QUESTÕES FGV</span><div class="box"><div class="qmeta">${it.m}</div><div class="h2">Questão ${i+1}/11</div><div class="question">${it.q}</div>${it.opts.map((op,j)=>`<button class="opt" onclick="answer(${i},${j},this)">${'abcde'[j]}) ${op}</button>`).join('')}<div id="fb${i}" class="feedback"></div></div></section>`});document.getElementById('quizScreens').innerHTML=html;}
-buildQuiz(); const total=23;
-function save(){localStorage.setItem('po_current',current);localStorage.setItem('po_answers',JSON.stringify(answers));}
-function update(){document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));document.getElementById('s'+current).classList.add('active');document.getElementById('bar').style.width=((current+1)/total*100)+'%';document.getElementById('counter').innerText='Tela '+(current+1)+' de '+total;document.getElementById('nameEnd').innerText=localStorage.getItem('po_name')||'Aluno';let ok=0,no=0;Object.values(answers).forEach(v=>v?ok++:no++);document.getElementById('scoreOk').innerText=ok;document.getElementById('scoreNo').innerText=no;save();window.scrollTo(0,0)}
-function go(n){current=Math.max(0,Math.min(total-1,n));update()} function next(){go(current+1)} function prev(){go(current-1)}
-function startTrail(){const n=document.getElementById('student').value.trim(); if(!n){alert('Digite seu nome para iniciar.');return} localStorage.setItem('po_name',n); go(1)}
-function continueTrail(){current=Number(localStorage.getItem('po_current')||1);update()}
-function answer(i,j,btn){const q=questions[i];const box=btn.parentElement;box.querySelectorAll('.opt').forEach((b,k)=>{b.disabled=true;if(k===q.a)b.classList.add('correct');if(k===j&&j!==q.a)b.classList.add('wrong')});const ok=j===q.a;answers[i]=ok;const fb=document.getElementById('fb'+i);fb.className='feedback '+(ok?'ok':'no');fb.innerHTML=(ok?'✅ Muito bem! ':'❌ Atenção! ') + q.exp;save()}
-function resetAll(){if(confirm('Deseja reiniciar toda a trilha?')){localStorage.removeItem('po_current');localStorage.removeItem('po_answers');answers={};location.reload()}}
-function sendStart(){const nome=document.getElementById('student').value.trim()||localStorage.getItem('po_name')||'Aluno';const msg=`Professor Moreira, o aluno ${nome} iniciou a trilha de Princípios Orçamentários.`;window.open(`https://wa.me/${phone}?text=${encodeURIComponent(msg)}`,'_blank')}
-function sendFinish(){let ok=0,no=0;Object.values(answers).forEach(v=>v?ok++:no++);const nome=localStorage.getItem('po_name')||'Aluno';const msg=`Professor Moreira, o aluno ${nome} concluiu a trilha de Princípios Orçamentários. Acertos: ${ok}. Erros: ${no}.`;window.open(`https://wa.me/${phone}?text=${encodeURIComponent(msg)}`,'_blank')}
-update();
+
+const questions=[
+{meta:'FGV - Ana Leg (ALETO)/ALETO/Ciências Econômicas/2024', text:`01) Os princípios orçamentários são premissas a serem observadas na elaboração e na execução da lei orçamentária. 
+Relacione cada um dos seguintes princípios orçamentários às suas respectivas características. 
+1. Unidade. 
+2. Totalidade. 
+3. Universalidade 
+4. Pureza 
+( ) Deve existir um orçamento para dado exercício financeiro e para determinado ente, contendo todas as receitas e despesas. 
+( ) Possibilita a coexistência de vários orçamentos autônomos, mas que podem ser vistos de forma consolidada, permitindo- se assim uma visão ao mesmo tempo segregada e geral das finanças públicas. 
+( ) A adoção desse princípio possibilita: conhecer a priori todas as receitas e despesas do governo e dar prévia autorização para respectiva arrecadação e realização, além de garantir que todos os órgãos e unidades da administração pública estejam contemplados no orçamento. 
+( ) Estabelece que a LOA não conterá dispositivo estranho à previsão da receita e à fixação da despesa, ressalvados a autorização para abertura de créditos suplementares e a contratação de operações de crédito. 
+Assinale a opção que indica a relação correta, segundo a ordem apresentada.`, opts:['a) 1 – 2 – 3 - 4','b) 1 – 3 – 2 – 4.','c) 3 – 2 – 1 – 4.','d) 3 – 4 – 1 – 2.','e) 4 – 1 – 2 – 3.'], ans:'A', exp:'Gabarito A. Unidade: orçamento único. Totalidade: coexistência de orçamentos autônomos vistos de forma consolidada. Universalidade: todas as receitas e despesas. Pureza/Exclusividade: LOA sem dispositivo estranho.'},
+{meta:'FGV - Cons Leg (CM SP)/CM SP/Economia/2024', text:`02) “Os princípios são normas gerais que, pela sua relevância, abrangência e valor intrínseco, fundamentam o sistema jurídico. Permitem a interpretação de situações concretas com base nos fins a que se destinam a norma. Desde seus primórdios, a instituição orçamentária foi cercada de uma série de princípios e regras com a finalidade de aumentar-lhe a consistência no cumprimento de sua principal finalidade política: auxiliar o controle parlamentar sobre o governo.
+Tais normas receberam grande ênfase na fase em que os orçamentos possuíam preponderante conotação jurídica, sendo que alguns foram incorporados na legislação: basicamente a Constituição Federal de 1988, a Lei no 4.320/64 (Lei de Finanças Públicas), a Lei no 101/2000 (Lei de Responsabilidade Fiscal) e as Leis de Diretrizes Orçamentárias (LDOs). Os princípios orçamentários são premissas a serem observadas na elaboração e na execução da lei orçamentária”.
+Câmara dos Deputados, PRINCÍPIOS ORÇAMENTÁRIOS. Disponível em:
+https://www2.camara.leg.br/orcamento-da- uniao/cidadao/entenda/cursopo/principios.
+Relacione cada princípio orçamentário a seguir com sua respectiva característica: 
+1. Unidade 
+2. Totalidade 
+3. Universalidade 
+4. Pureza 
+( ) Deve existir apenas um orçamento para dado exercício financeiro e para determinado ente, contendo todas as receitas e despesas. 
+( ) Possibilita a coexistência de vários orçamentos autônomos, mas que podem ser vistos de forma consolidada, permitindo-se assim uma visão ao mesmo tempo segregada e geral das finanças públicas. 
+( ) O orçamento deve conter todas as receitas e todas as despesas do Estado. 
+( ) A Lei Orçamentária Anual não conterá dispositivo estranho à previsão da receita e à fixação da despesa. 
+A associação correta, na ordem apresentada, é:`, opts:['a) 1 – 2 – 3 – 4.','b) 1 – 3 – 2 – 4.','c) 2 – 1 – 4 – 3.','d) 3 – 2 – 4 – 1.','e) 3 – 4 – 1 – 2.'], ans:'A', exp:'Gabarito A. A sequência correta é Unidade, Totalidade, Universalidade e Pureza.'},
+{meta:'FGV - Cons Leg (CM SP)/CM SP/Contador/2024', text:`03) Os princípios orçamentários fornecem uma base sólida para a gestão responsável e eficiente dos recursos públicos no Brasil, promovendo a accountability e a conformidade com os princípios democráticos. 
+ 
+Em relação ao tema, relacione os princípios orçamentários listados a seguir com suas respectivas definições. 
+1. Não afetação da receita de impostos 
+2. Transparência 
+3. Totalidade 
+4. Publicidade 
+( ) preconiza a divulgação das informações sobre a arrecadação da receita e a execução da despesa. 
+( ) determina que o orçamento seja divulgado de forma ampla e acessível ao público. 
+( ) evita múltiplos orçamentos paralelos dentro da mesma pessoa política. 
+( ) proíbe a vinculação da receita de impostos a órgão, fundo ou despesa, salvo exceções previstas na Constituição Federal. 
+Assinale a opção que indica a relação correta, na ordem apresentada.`, opts:['a) 1 – 3 – 2 – 4','b) 1 – 4 – 2 – 3.','c) 4 – 2 – 3 – 1.','d) 2 – 4 – 3 – 1.','e) 4 – 3 – 2 – 1.'], ans:'D', exp:'Gabarito D. Transparência trata da divulgação das informações de arrecadação e execução; publicidade trata da divulgação ampla; totalidade evita orçamentos paralelos; não afetação veda vincular impostos.'},
+{meta:'FGV - Ana GM (Pref SJC)/Pref SJC/Ciências Econômicas/2024', text:`04) Relacione cada princípio orçamentário elencado abaixo com sua respectiva característica. 
+1. Totalidade 
+2. Universalidade 
+3. Periodicidade 
+4. Especificação 
+( ) Possibilita a coexistência de vários orçamentos autônomos, mas que podem ser vistos de forma consolidada, permitindo- se assim uma visão ao mesmo tempo segregada e geral das finanças públicas. 
+( ) Possibilita conhecer a priori todas as receitas e despesas do governo e dar prévia autorização para respectiva arrecadação e realização. 
+( ) O orçamento deve ser elaborado e autorizado para um determinado exercício financeiro, e que corresponde ao civil. 
+( ) As receitas e as despesas devem ser evidenciadas na lei orçamentária de tal forma que se possa saber, pormenorizadamente, as origens dos recursos e sua aplicação. 
+A relação correta, na ordem dada, é:`, opts:['a) 1, 2, 3 e 4.','b) 1, 3, 2 e 4.','c) 2, 3, 1 e 4.','d) 2, 1, 4 e 3.','e) 3, 2, 4 e 3.'], ans:'A', exp:'Gabarito A. Totalidade, Universalidade, Periodicidade e Especificação.'},
+{meta:'FGV - Cons Leg (CM SP)/CM SP/Administração/2024', text:`05) Os princípios orçamentários estabelecem um alicerce robusto para a administração responsável e eficaz dos recursos públicos no Brasil, fomentando a responsabilidade e a adesão aos princípios democráticos. 
+Em relação aos princípios orçamentários, avalie se cada afirmativa a seguir é falsa (F) ou verdadeira (V). 
+( ) O princípio da transparência determina ao governo divulgar o orçamento público de forma ampla à sociedade. 
+( ) O princípio da totalidade determina existência de orçamento único para cada um dos entes federados. 
+( ) O princípio de não-afetação da receita de impostos ratifica vinculação da receita de impostos a órgão, fundo ou despesa. 
+( ) O princípio da universalidade determina que a LOA de cada ente federado deverá conter todas as receitas e despesas de todos os poderes, órgãos, entidades, fundos e fundações instituídas e mantidas pelo Poder Público. As afirmativas são, respectivamente,`, opts:['a) V – F – F – F.','b) F – F – V – F.','c) V – V – V – V.','d) F – F – F – F.','e) V – V – F – V.'], ans:'E', exp:'Gabarito E. As duas primeiras são verdadeiras, a terceira é falsa porque a não-afetação veda a vinculação, e a quarta é verdadeira.'},
+{meta:'FGV - Ana GM (Pref SJC)/Pref SJC/Administração de Empresas/2024', text:`06) Os princípios orçamentários são premissas básicas que servem de orientação para a Administração Pública nos processos de elaboração e execução orçamentária. Com relação a esses princípios, analise as assertivas a seguir: 
+I. O princípio da unidade prescreve que o orçamento deve, necessariamente, prever todas as receitas e despesas do estado, salvo exceções como a autorização para antecipação de receitas orçamentárias. 
+II. O princípio da exclusividade estabelece que o orçamento deve ter sua autorização delimitada por determinado período, equivalente ao ano civil. 
+III. O princípio da não afetação determina que as receitas não podem ser comprometidas para o atendimento de determinados gastos, visando evitar a rigidez orçamentária. Está correto o que se afirma em`, opts:['a) I, apenas.','b) II, apenas.','c) III, apenas.','d) I e II, apenas.','e) I, II e III.'], ans:'C', exp:'Gabarito C. I descreve universalidade, não unidade. II descreve anualidade/periodicidade, não exclusividade. III está correta quanto à não afetação.'},
+{meta:'FGV - Cons Leg (CM SP)/CM SP/Contador/2024', text:`07) Os princípios orçamentários no Brasil representam diretrizes fundamentais que norteiam a elaboração, a execução e o controle do orçamento público. Esses princípios visam a garantir a transparência, a eficiência e a legalidade na gestão dos recursos públicos. 
+Assinale a afirmativa correta em relação aos Princípios Orçamentários aplicáveis aos Poderes Executivo, Legislativo e Judiciário em todas as esferas governamentais.`, opts:['a) A Exclusividade exige que o Poder Público realize ou se abstenha de fazer apenas o que for expressamente autorizado pela lei.','b) A Não-Vinculação da Receita de Impostos proíbe que a Lei Orçamentária Anual inclua dispositivos que não estejam relacionados à previsão de receita e à alocação de despesas.','c) A Publicidade exige que as receitas e despesas sejam registradas na Lei Orçamentária Anual pelo seu valor total e sem nenhum tipo de dedução.','d) A Unidade exige que cada ente federado deve possuir um único orçamento, evitando a criação de múltiplos orçamentos paralelos dentro da mesma pessoa política.','e) A Universalidade implica a necessidade de que cada ente federado possua um orçamento único para evitar a existência de múltiplos orçamentos paralelos dentro da mesma pessoa política.'], ans:'D', exp:'Gabarito D. Unidade exige um único orçamento por ente, evitando múltiplos orçamentos paralelos.'},
+{meta:'FGV - AA (DNIT)/DNIT/Administração/2024', text:`08) No que diz respeito aos princípios orçamentários, aponte o princípio que está inserido na Lei nº 4.320/1964, que possibilita o poder legislativo impedir que o poder executivo realize qualquer operação de receita ou despesa sem sua prévia autorização.`, opts:['a) Princípio da publicidade.','b) Princípio da anualidade.','c) Princípio da universalidade.','d) Princípio do orçamento bruto.','e) Princípio da uniformidade.'], ans:'C', exp:'Gabarito C. A universalidade permite que o Legislativo conheça previamente todas as receitas e despesas, autorizando a arrecadação e a realização.'},
+{meta:'FGV - ACE (TCE-GO)/TCE GO/Ciências Contábeis/2024', text:`09) Os Princípios Orçamentários visam estabelecer diretrizes norteadoras básicas, a fim de conferir racionalidade, eficiência e transparência para os processos de elaboração, execução e controle do orçamento público. 
+Assinale a opção que indica o Princípio Orçamentário que evita múltiplos orçamentos paralelos dentro da mesma pessoa política.`, opts:['a) Anualidade.','b) Universalidade.','c) Legalidade.','d) Unidade.','e) Orçamento bruto.'], ans:'D', exp:'Gabarito D. Unidade: um orçamento por ente, evitando orçamentos paralelos.'},
+{meta:'FGV - Ana Leg (ALEP)/ALEP/Administrador/2024', text:`10) Os Princípios Orçamentários buscam estabelecer diretrizes fundamentais para assegurar a racionalidade, eficiência e transparência nos processos de criação, implementação e fiscalização do orçamento público. 
+Assinale a opção que compreende uma característica do princípio da transparência.`, opts:['a) Veda a vinculação da receita de impostos a órgão, fundo ou despesa, salvo exceções estabelecidas pela própria Constituição Federal.','b) Determina a disponibilidade de informações sobre a arrecadação da receita e a execução da despesa para qualquer pessoa.','c) Evita múltiplos orçamentos paralelos dentro da mesma pessoa política.','d) Justifica-se pelo fato de o orçamento ser fixado em lei.','e) Coíbe múltiplos orçamentos paralelos dentro da mesma pessoa política.'], ans:'B', exp:'Gabarito B. Transparência exige disponibilidade de informações sobre arrecadação da receita e execução da despesa.'},
+{meta:'FGV - Ana Leg III (ALESC)/ALESC/Administrador/2024', text:`11) Os princípios orçamentários são diretrizes fundamentais que orientam o processo de elaboração, execução e controle do orçamento, garantindo transparência, responsabilidade e eficiência na gestão dos recursos financeiros de uma organização. 
+Assinale a opção que indica o princípio que preconiza que o orçamento deve ser uno.`, opts:['a) Anualidade.','b) Universalidade.','c) Exclusividade.','d) Unidade.','e) Orçamento Bruto.'], ans:'D', exp:'Gabarito D. O princípio que preconiza orçamento uno é a Unidade.'}
+];
+function save(){localStorage.setItem('po_name',name);localStorage.setItem('po_lesson',lessonIndex);localStorage.setItem('po_q',qIndex);localStorage.setItem('po_answers',JSON.stringify(answers));}
+function hideAll(){document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'))}
+function show(id){hideAll();document.getElementById(id).classList.add('active');window.scrollTo(0,0)}
+function showHome(){show('home')}
+function startTrail(){name=document.getElementById('studentName').value.trim(); if(!name){alert('Digite seu nome para começar.');return;} lessonIndex=0;qIndex=0;answers={};save();renderLesson();show('lesson')}
+function continueTrail(){name=localStorage.getItem('po_name')||document.getElementById('studentName').value.trim(); if(!name){alert('Digite seu nome primeiro.');return;} goCurrent();}
+function goCurrent(){if(!name){showHome();return;} if(lessonIndex<lessons.length){renderLesson();show('lesson')}else if(qIndex<questions.length){renderQuestion();show('quiz')}else{renderFinal();show('final')}}
+function renderLesson(){let l=lessons[lessonIndex];document.getElementById('lessonCount').innerText=`Card ${lessonIndex+1}/${lessons.length}`;document.getElementById('lessonProgress').style.width=((lessonIndex+1)/lessons.length*100)+'%';document.getElementById('lessonTitle').innerText=l.t;document.getElementById('lessonBody').innerHTML=l.b;document.getElementById('lessonMap').innerHTML=l.m;save();}
+function nextLesson(){if(lessonIndex<lessons.length-1){lessonIndex++;renderLesson()}else{lessonIndex=lessons.length;save();renderQuestion();show('quiz')}}
+function prevLesson(){if(lessonIndex>0){lessonIndex--;renderLesson()}else showHome()}
+function renderQuestion(){let q=questions[qIndex];document.getElementById('qCount').innerText=`Questão ${qIndex+1}/${questions.length}`;document.getElementById('qProgress').style.width=((qIndex+1)/questions.length*100)+'%';document.getElementById('qMeta').innerText=q.meta;document.getElementById('qText').innerText=q.text;let opt=document.getElementById('options');opt.innerHTML='';q.opts.forEach((o,i)=>{let letter='ABCDE'[i];let b=document.createElement('button');b.className='option';b.innerText=o;b.onclick=()=>answer(letter);if(answers[qIndex]){if(letter===q.ans)b.classList.add('correct'); if(letter===answers[qIndex]&&letter!==q.ans)b.classList.add('wrong')}opt.appendChild(b)});document.getElementById('feedback').innerHTML=answers[qIndex]?`<div class="explain"><b>${answers[qIndex]===q.ans?'✅ Acertou!':'❌ Errou!'}</b><br>${q.exp}</div>`:'';renderGrid();save();}
+function answer(letter){answers[qIndex]=letter;save();renderQuestion();}
+function nextQuestion(){if(qIndex<questions.length-1){qIndex++;renderQuestion()}else{renderFinal();show('final')}}
+function prevQuestion(){if(qIndex>0){qIndex--;renderQuestion()}else{lessonIndex=lessons.length-1;renderLesson();show('lesson')}}
+function renderGrid(){let g=document.getElementById('qGrid');g.innerHTML='';questions.forEach((_,i)=>{let b=document.createElement('button');b.innerText=i+1;if(answers[i])b.classList.add('done');if(i===qIndex)b.classList.add('current');b.onclick=()=>{qIndex=i;renderQuestion()};g.appendChild(b)})}
+function score(){let s=0;questions.forEach((q,i)=>{if(answers[i]===q.ans)s++});return s}
+function renderFinal(){let s=score();document.getElementById('finalName').innerHTML=`<b>${name||'Aluno'}</b>, sua pontuação foi:`;document.getElementById('finalScore').innerText=`${s}/${questions.length}`;save();}
+function sendWhatsApp(){let s=score();let msg=`Professor Moreira, eu, ${name}, concluí a Trilha de Princípios Orçamentários. Pontuação: ${s}/${questions.length}.`;window.open(`https://wa.me/${phone}?text=${encodeURIComponent(msg)}`,'_blank')}
+function restartAll(){if(confirm('Deseja reiniciar toda a trilha?')){lessonIndex=0;qIndex=0;answers={};save();renderLesson();show('lesson')}}
+if(name)document.getElementById('studentName').value=name;
 </script>
 </body>
 </html>
